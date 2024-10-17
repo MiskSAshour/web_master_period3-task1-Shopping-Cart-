@@ -1,0 +1,52 @@
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+  opacity: 0;
+  transition: opacity 0.5s ease; /* Fade-in transition */
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.show.fade-in {
+  opacity: 1; /* Fade to visible */
+}
+
+#errorModal {
+  display: flex; /* Center the modal */
+  align-items: center;
+  justify-content: center;
+}
+
+#closeModal {
+  cursor: pointer; /* Pointer cursor for button */
+}
+
+#notification {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4caf50;
+  color: white;
+  padding: 15px;
+  border-radius: 4px;
+  z-index: 1000;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+#notification.show {
+  display: block;
+  opacity: 1;
+}
